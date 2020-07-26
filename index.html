@@ -9,7 +9,27 @@
 
 <body>
 	
-	
+<div ng-app="testApp" ng-controller="input-text">
+	First Name:
+	<input type="text" ng-model="firstName">
+	<br>Last Name:
+	<input type="text" ng-model="lastName">
+	<br>Year:
+	<input type="number" ng-model="year" value="21">
+	<br>
+	<br>Full Name: {{ firstName + " " + lastName + " " + year}}
+
+</div>
+
+<script>
+	var app = angular.module('testApp', []);
+		app.controller('input-text', function($scope) {
+			$scope.firstName= "Akmal";
+			$scope.lastName= "Sindorov";
+			$scope.year= "21";
+		});
+</script>
+
 
 </body>
 
