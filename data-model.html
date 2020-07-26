@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<script src="angular.min.js"></script>
+
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<!-- v1     -->
+    <p ng-bind="firstname"></p>
+<!-- v2 -->
+	<p>Last name: {{lastname}}</p>
+
+</div>
+<hr>
+<p ng-bind="lastname">Use the ng-bind directive to bind the innerHTML of an element to a property in the data model.</p>
+
+</body>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstname = "John";
+    $scope.lastname = "Doe";    
+});
+</script>
+<!-- Mirrored from www.w3schools.com/angular/tryit.asp?filename=try_ng_databinding by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Jul 2018 02:18:28 GMT -->
+</html>
