@@ -1,0 +1,29 @@
+<!-- 
+The currency Filter
+	The currency filter formats a number as currency: -->
+
+<!DOCTYPE html>
+<html>
+	<script src="angular.min.js"></script>
+
+<body>
+
+<div ng-app="myApp" ng-controller="costCtrl">
+
+<h1>Price: {{ price | currency }}</h1>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('costCtrl', function($scope) {
+    $scope.price = 58;
+});
+</script>
+
+<p>The currency filter formats a number to a currency format.</p>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/angular/tryit.asp?filename=try_ng_filters_currency by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Jul 2018 01:53:53 GMT -->
+</html>
