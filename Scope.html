@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Scope</title>
+	<script src="angular.min.js"></script>
+</head>
+
+<body ng-app="testApp" ng-controller="myCtrl">
+	
+<h1>{{page-Title}}</h1>
+
+</body>
+
+<script src="testApp.js"></script>
+<script>
+app.controller('myCtrl', function($scope) {
+    $scope.pageTitle = "page-Title";
+});
+</script>
+</html>
