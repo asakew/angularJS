@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<script src="angular.min.js"></script>
+
+<body>
+
+<div ng-app="myApp" ng-controller="personCtrl">
+
+<p>The name is {{ lastName | uppercase }}</p> <!-- lowercase  -->
+
+</div>
+
+<script>
+angular.module('myApp', []).controller('personCtrl', function($scope) {
+    $scope.firstName = "John",
+    $scope.lastName = "Doe"
+});
+</script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/angular/tryit.asp?filename=try_ng_filters_uppercase by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Jul 2018 01:53:53 GMT -->
+</html>
