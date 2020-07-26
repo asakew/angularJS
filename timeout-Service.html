@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <script src="angular.min.js"></script>
+
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl"> 
+
+<p>This header will change after two seconds:</p>
+
+<h1>{{myHeader}}</h1>
+
+</div>
+
+<p>The $timeout service runs a function after a specified number of milliseconds.</p>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $timeout) {
+  $scope.myHeader = "Hello World!";
+  $timeout(function () {
+      $scope.myHeader = "Voqtdan Kechikdingizku...";
+  }, 2000);
+});
+</script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/angular/tryit.asp?filename=try_ng_services_timeout by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Jul 2018 02:18:29 GMT -->
+</html>
