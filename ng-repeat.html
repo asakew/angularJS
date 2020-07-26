@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>angularJS</title>
+	<script src="angular.min.js"></script>
+</head>
+
+<body>
+	
+<div ng-app="testApp" ng-controller="skillCtrl" >
+	Skill:
+	<ul>
+    <li ng-repeat="x in skill">
+      {{ x }}
+    </li>
+  </ul>
+</div>
+
+<script src="testApp.js"></script>
+<script src="skillCtrl.js"></script>
+
+</body>
+
+</html>
