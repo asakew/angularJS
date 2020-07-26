@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>app.directives</title>
+	<script src="angular.min.js"></script>
+</head>
+
+<body ng-app="AppDirective">
+	<header-directive></header-directive>
+	<main>main...</main>
+	<footer-directive></footer-directive>
+</body>
+
+<script src="AppDirective.js"></script>
+<script src="headerDirective.js"></script>
+<script src="footerDirective.js"></script>
+</html>
+
+<!-- 
+You can invoke a directive by using:
+	* Element name
+	* Attribute
+	* Class
+	* Comment
+The examples below will all produce the same result:
+
+Element name:
+	<w3-test-directive></w3-test-directive>
+Attribute:
+	<div w3-test-directive></div>
+Class:
+	<div class="w3-test-directive"></div>
+Comment: -->
+	<!-- directive: w3-test-directive -->
+
+<!-- 
+Restrictions:
+	You can restrict your directives to only be invoked by some of the methods.
+
+	Example:
+	By adding a restrict property with the value "A", the directive can only be invoked by attributes:
+		var app = angular.module("myApp", []);
+		app.directive("w3TestDirective", function() {
+		    return {
+		        restrict : "A",
+		        template : "<h1>Made by a directive!</h1>"
+		    };
+		});
+	The legal restrict values are:
+		E for Element name
+		A for Attribute
+		C for Class
+		M for Comment
+	By default the value is EA, meaning that both Element names and attribute names can invoke the directive.
+ -->
